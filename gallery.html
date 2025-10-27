@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Bella Africa</title>
+    <meta name="description" content="Explore our photo gallery showcasing Bella Africa's impact, community projects, and success stories across Ghana and West Africa.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Bella Africa Logo" class="logo-img">
+                    <span class="logo-text">Bella Africa</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                <li role="none"><a href="projects.html" class="nav-link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="goals.html" class="nav-link" role="menuitem">Goals</a></li>
+                <li role="none"><a href="impact.html" class="nav-link" role="menuitem">Impact</a></li>
+                <li role="none"><a href="volunteer.html" class="nav-link" role="menuitem">Get Involved</a></li>
+                <li role="none"><a href="education.html" class="nav-link" role="menuitem">Learn</a></li>
+                <li role="none"><a href="gallery.html" class="nav-link active" role="menuitem">Gallery</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                <li role="none"><a href="donate.html" class="nav-link donate-btn" role="menuitem" aria-label="Make a donation">Donate</a></li>
+            </ul>
+            
+            <div class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section gallery-hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-images"></i>
+                    Photo Gallery
+                </div>
+                <h1>Our Impact in Pictures</h1>
+                <p>Explore our visual journey of transformation, community empowerment, and sustainable development across Ghana and West Africa.</p>
+                                            <div class="hero-stats">
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">47</span>
+                                    <span class="hero-stat-label">Photos</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">50+</span>
+                                    <span class="hero-stat-label">Communities</span>
+                                </div>
+                                <div class="hero-stat">
+                                    <span class="hero-stat-number">3+</span>
+                                    <span class="hero-stat-label">Years</span>
+                                </div>
+                            </div>
+            </div>
+        </section>
+
+        <!-- Gallery Categories -->
+        <section class="gallery-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Gallery Categories</h2>
+                    <p>Browse our photos by category to see different aspects of our work</p>
+                </div>
+                
+                <div class="category-grid">
+                    <div class="category-card glass-card" onclick="filterGallery('all')">
+                        <div class="category-icon">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3>All Photos</h3>
+                        <p>View all our gallery photos</p>
+                    </div>
+                    
+                    <div class="category-card glass-card" onclick="filterGallery('community')">
+                        <div class="category-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Community Projects</h3>
+                        <p>Community development initiatives</p>
+                    </div>
+                    
+                    <div class="category-card glass-card" onclick="filterGallery('education')">
+                        <div class="category-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Educational programs and activities</p>
+                    </div>
+                    
+                    <div class="category-card glass-card" onclick="filterGallery('health')">
+                        <div class="category-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h3>Healthcare</h3>
+                        <p>Health and wellness initiatives</p>
+                    </div>
+                    
+                    <div class="category-card glass-card" onclick="filterGallery('agriculture')">
+                        <div class="category-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Agriculture</h3>
+                        <p>Farming and food security projects</p>
+                    </div>
+                    
+                    <div class="category-card glass-card" onclick="filterGallery('events')">
+                        <div class="category-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Events</h3>
+                        <p>Special events and celebrations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+        <section class="photo-gallery">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2>Photo Gallery</h2>
+                    <div class="gallery-controls">
+                        <button class="btn btn-outline" onclick="changeLayout('grid')">
+                            <i class="fas fa-th"></i> Grid
+                        </button>
+                        <button class="btn btn-outline" onclick="changeLayout('masonry')">
+                            <i class="fas fa-th-large"></i> Masonry
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Community Projects -->
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/DSC_0026_edited.jpg', 'Community Building Workshop', 'Local community members participating in our capacity building workshop.')">
+                        <img src="images/Gallery/DSC_0026_edited.jpg" alt="Community Building Workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Building Workshop</h4>
+                                <p>Capacity building and community development</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/DSC_0030_edited.jpg', 'Educational Support', 'Providing educational materials and support to local schools.')">
+                        <img src="images/Gallery/DSC_0030_edited.jpg" alt="Educational Support" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Educational Support</h4>
+                                <p>Supporting local education initiatives</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item agriculture" onclick="openLightbox('images/Gallery/DSC_0043_edited.jpg', 'Agricultural Training', 'Farmers learning sustainable farming techniques.')">
+                        <img src="images/Gallery/DSC_0043_edited.jpg" alt="Agricultural Training" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Agricultural Training</h4>
+                                <p>Sustainable farming techniques</p>
+                                <span class="gallery-category">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/DSC_0054_edited.jpg', 'Health Awareness', 'Community health awareness and education programs.')">
+                        <img src="images/Gallery/DSC_0054_edited.jpg" alt="Health Awareness" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Awareness</h4>
+                                <p>Community health education</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/DSC_0087_edited.jpg', 'Women Empowerment', 'Women\'s empowerment and leadership training.')">
+                        <img src="images/Gallery/DSC_0087_edited.jpg" alt="Women Empowerment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Women Empowerment</h4>
+                                <p>Leadership and skills training</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/DSC_0129_edited.jpg', 'Student Support', 'Supporting students with educational resources.')">
+                        <img src="images/Gallery/DSC_0129_edited.jpg" alt="Student Support" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Student Support</h4>
+                                <p>Educational resources and mentorship</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item agriculture" onclick="openLightbox('images/Gallery/DSC_0136_edited.jpg', 'Crop Management', 'Teaching sustainable crop management practices.')">
+                        <img src="images/Gallery/DSC_0136_edited.jpg" alt="Crop Management" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Crop Management</h4>
+                                <p>Sustainable agricultural practices</p>
+                                <span class="gallery-category">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events" onclick="openLightbox('images/Gallery/DSC_0138_edited.jpg', 'Community Celebration', 'Celebrating community achievements and milestones.')">
+                        <img src="images/Gallery/DSC_0138_edited.jpg" alt="Community Celebration" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Celebration</h4>
+                                <p>Celebrating achievements together</p>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/DSC_0165_edited.jpg', 'Health Check-up', 'Providing health check-ups and medical support.')">
+                        <img src="images/Gallery/DSC_0165_edited.jpg" alt="Health Check-up" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Check-up</h4>
+                                <p>Medical support and health services</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/DSC_0202_edited.jpg', 'Community Meeting', 'Community leaders discussing development plans.')">
+                        <img src="images/Gallery/DSC_0202_edited.jpg" alt="Community Meeting" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Meeting</h4>
+                                <p>Planning and decision making</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/DSC_0248_edited.jpg', 'Learning Session', 'Interactive learning sessions with community members.')">
+                        <img src="images/Gallery/DSC_0248_edited.jpg" alt="Learning Session" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Learning Session</h4>
+                                <p>Interactive community learning</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item agriculture" onclick="openLightbox('images/Gallery/DSC_0318_edited.jpg', 'Harvest Celebration', 'Celebrating successful harvests and food security.')">
+                        <img src="images/Gallery/DSC_0318_edited.jpg" alt="Harvest Celebration" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Harvest Celebration</h4>
+                                <p>Food security achievements</p>
+                                <span class="gallery-category">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events" onclick="openLightbox('images/Gallery/DSC_0367_edited.jpg', 'Project Launch', 'Launching new community development projects.')">
+                        <img src="images/Gallery/DSC_0367_edited.jpg" alt="Project Launch" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Project Launch</h4>
+                                <p>New initiatives and partnerships</p>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/DSC_0402_edited.jpg', 'Health Education', 'Teaching community health and hygiene practices.')">
+                        <img src="images/Gallery/DSC_0402_edited.jpg" alt="Health Education" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Education</h4>
+                                <p>Hygiene and wellness training</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/DSC_0424_edited.jpg', 'Youth Development', 'Empowering young people through skills training.')">
+                        <img src="images/Gallery/DSC_0424_edited.jpg" alt="Youth Development" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Youth Development</h4>
+                                <p>Skills training and mentorship</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events" onclick="openLightbox('images/Gallery/IMG-20250802-WA0026.jpg', 'Community Gathering', 'Community members coming together for events.')">
+                        <img src="images/Gallery/IMG-20250802-WA0026.jpg" alt="Community Gathering" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Gathering</h4>
+                                <p>Building strong community bonds</p>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/IMG-20250802-WA0027.jpg', 'Educational Workshop', 'Conducting educational workshops and training sessions.')">
+                        <img src="images/Gallery/IMG-20250802-WA0027.jpg" alt="Educational Workshop" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Educational Workshop</h4>
+                                <p>Knowledge sharing and capacity building</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional WhatsApp Images -->
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/IMG-20250802-WA0028.jpg', 'Community Development', 'Community development and capacity building initiatives.')">
+                        <img src="images/Gallery/IMG-20250802-WA0028.jpg" alt="Community Development" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Development</h4>
+                                <p>Building stronger communities together</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/IMG-20250802-WA0029.jpg', 'Learning Initiative', 'Educational programs and learning initiatives.')">
+                        <img src="images/Gallery/IMG-20250802-WA0029.jpg" alt="Learning Initiative" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Learning Initiative</h4>
+                                <p>Empowering through education</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/IMG-20250802-WA0030.jpg', 'Health Outreach', 'Community health outreach and awareness programs.')">
+                        <img src="images/Gallery/IMG-20250802-WA0030.jpg" alt="Health Outreach" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Outreach</h4>
+                                <p>Promoting community health and wellness</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item agriculture" onclick="openLightbox('images/Gallery/IMG-20250802-WA0031.jpg', 'Agricultural Project', 'Sustainable agricultural development projects.')">
+                        <img src="images/Gallery/IMG-20250802-WA0031.jpg" alt="Agricultural Project" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Agricultural Project</h4>
+                                <p>Supporting sustainable farming practices</p>
+                                <span class="gallery-category">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item events" onclick="openLightbox('images/Gallery/IMG-20250802-WA0032.jpg', 'Community Event', 'Special community events and celebrations.')">
+                        <img src="images/Gallery/IMG-20250802-WA0032.jpg" alt="Community Event" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Event</h4>
+                                <p>Celebrating community achievements</p>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/IMG-20250802-WA0036.jpg', 'Community Empowerment', 'Empowering communities through various initiatives.')">
+                        <img src="images/Gallery/IMG-20250802-WA0036.jpg" alt="Community Empowerment" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Empowerment</h4>
+                                <p>Building self-sufficient communities</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Cause Images -->
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/cause-1.jpg', 'Community Cause', 'Supporting important community causes and initiatives.')">
+                        <img src="images/Gallery/cause-1.jpg" alt="Community Cause" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Cause</h4>
+                                <p>Supporting vital community initiatives</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/cause-4.jpg', 'Health Cause', 'Healthcare initiatives and medical support programs.')">
+                        <img src="images/Gallery/cause-4.jpg" alt="Health Cause" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Cause</h4>
+                                <p>Improving community health outcomes</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/cause-5.jpg', 'Education Cause', 'Educational support and learning programs.')">
+                        <img src="images/Gallery/cause-5.jpg" alt="Education Cause" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Education Cause</h4>
+                                <p>Empowering through knowledge</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item agriculture" onclick="openLightbox('images/Gallery/cause-6.jpg', 'Agricultural Cause', 'Sustainable agriculture and food security projects.')">
+                        <img src="images/Gallery/cause-6.jpg" alt="Agricultural Cause" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Agricultural Cause</h4>
+                                <p>Promoting food security and sustainability</p>
+                                <span class="gallery-category">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Screenshot Images -->
+                    <div class="gallery-item events" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-7.04.30-am.png', 'Project Documentation', 'Documenting our projects and achievements.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-7.04.30-am.png" alt="Project Documentation" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Project Documentation</h4>
+                                <p>Recording our impact and progress</p>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1106.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1071.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1061.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1063.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1064.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1119.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.54.44-pm.png', 'Community Impact', 'Measuring and documenting community impact.')">
+                        <img src="images/Gallery/STJ_1103.jpg" alt="Community Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Impact</h4>
+                                <p>Tracking positive community changes</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-12.47.22-pm.png', 'Educational Impact', 'Documenting educational program outcomes.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-12.47.22-pm.png" alt="Educational Impact" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Educational Impact</h4>
+                                <p>Measuring learning outcomes</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.04.58-pm.png', 'Health Program', 'Health program implementation and monitoring.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-1.04.58-pm.png" alt="Health Program" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Program</h4>
+                                <p>Implementing health initiatives</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.04.58-pm.png', 'Health Program', 'Health program implementation and monitoring.')">
+                        <img src="images/Gallery/STJ_1065.jpg" alt="Health Program" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Program</h4>
+                                <p>Implementing health initiatives</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="gallery-item health" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.04.58-pm.png', 'Health Program', 'Health program implementation and monitoring.')">
+                        <img src="images/Gallery/STJ_1074.jpg" alt="Health Program" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Health Program</h4>
+                                <p>Implementing health initiatives</p>
+                                <span class="gallery-category">Healthcare</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item agriculture" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.03.04-pm.png', 'Agricultural Program', 'Agricultural development and monitoring programs.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-1.03.04-pm.png" alt="Agricultural Program" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Agricultural Program</h4>
+                                <p>Supporting agricultural development</p>
+                                <span class="gallery-category">Agriculture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/Screenshot-2023-07-08-at-1.01.54-pm.png', 'Community Program', 'Community development program monitoring.')">
+                        <img src="images/Gallery/Screenshot-2023-07-08-at-1.01.54-pm.png" alt="Community Program" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Program</h4>
+                                <p>Monitoring community development</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Image Files -->
+                    <div class="gallery-item events" onclick="openLightbox('images/Gallery/WhatsApp Image 2025-08-01 at 08.37.06_cb9cfc5d.jpg', 'Community Event', 'Special community events and gatherings.')">
+                        <img src="images/Gallery/WhatsApp Image 2025-08-01 at 08.37.06_cb9cfc5d.jpg" alt="Community Event" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Event</h4>
+                                <p>Bringing communities together</p>
+                                <span class="gallery-category">Events</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item education" onclick="openLightbox('images/Gallery/WhatsApp Image 2025-08-01 at 08.37.06_0bb7b25c.jpg', 'Educational Activity', 'Educational activities and learning sessions.')">
+                        <img src="images/Gallery/WhatsApp Image 2025-08-01 at 08.37.06_0bb7b25c.jpg" alt="Educational Activity" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Educational Activity</h4>
+                                <p>Interactive learning experiences</p>
+                                <span class="gallery-category">Education</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hero Image -->
+                    <div class="gallery-item community" onclick="openLightbox('images/Gallery/h1_hero.jpg', 'Community Hero', 'Celebrating community heroes and leaders.')">
+                        <img src="images/Gallery/h1_hero.jpg" alt="Community Hero" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Community Hero</h4>
+                                <p>Recognizing community leadership</p>
+                                <span class="gallery-category">Community</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Stats -->
+        <section class="gallery-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-images"></i>
+                        </div>
+                        <div class="stat-number">47</div>
+                        <div class="stat-label">Photos Captured</div>
+                    </div>
+                    
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Communities Visited</div>
+                    </div>
+                    
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years of Impact</div>
+                    </div>
+                    
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number">10,000+</div>
+                        <div class="stat-label">Lives Touched</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content glass-card">
+                    <div class="cta-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Share Your Story</h3>
+                    <p>Have photos from our community projects? Share them with us and help document our collective impact.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Us
+                        </a>
+                        <a href="donate.html" class="btn btn-secondary">
+                            <i class="fas fa-heart"></i>
+                            Support Our Work
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <img id="lightbox-image" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+            <button class="lightbox-nav prev" onclick="changeImage(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-nav next" onclick="changeImage(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-heart"></i> Bella Africa</h3>
+                    <p>Empowering communities through sustainable development, education, and healthcare initiatives across Ghana and West Africa.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Our Projects</a></li>
+                        <li><a href="impact.html">Our Impact</a></li>
+                        <li><a href="volunteer.html">Get Involved</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul>
+                        <li><a href="education.html">Education</a></li>
+                        <li><a href="services.html">Healthcare</a></li>
+                        <li><a href="projects.html">Community Development</a></li>
+                        <li><a href="goals.html">Sustainable Goals</a></li>
+                        <li><a href="volunteer.html">Volunteer Opportunities</a></li>
+                    </ul>
+                </div>
+                
+                                            <div class="footer-section">
+                                <h3>Contact Info</h3>
+                                <ul>
+                                    <li><i class="fas fa-map-marker-alt"></i> Ghana, West Africa</li>
+                                    <li><i class="fas fa-phone"></i> +233 538 790 779</li>
+                                    <li><i class="fas fa-envelope"></i> info@bellaafrica.org</li>
+                                    <li><i class="fas fa-clock"></i> Always Available</li>
+                                </ul>
+                            </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bella Africa. All rights reserved.</p>
+                <p><em>"Empowering communities, one life at a time" - Bella Africa</em></p>
+                <p class="designer-credit">Developed and Powered by <strong>Jeffery Kobby Gaisey</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Gallery specific JavaScript
+        let currentFilter = 'all';
+        let currentLayout = 'grid';
+        let currentImageIndex = 0;
+        let filteredImages = [];
+
+        function filterGallery(category) {
+            currentFilter = category;
+            const items = document.querySelectorAll('.gallery-item');
+            
+            // Reset animations for filtered items
+            items.forEach((item, index) => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                    item.classList.add('show');
+                    // Add flying animation with delay
+                    item.style.animation = 'none';
+                    item.offsetHeight; // Trigger reflow
+                    item.style.animation = `flyIn 0.8s ease-out ${index * 0.1}s forwards`;
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('show');
+                }
+            });
+            
+            // Update active category button
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        function changeLayout(layout) {
+            currentLayout = layout;
+            const grid = document.getElementById('galleryGrid');
+            
+            if (layout === 'masonry') {
+                grid.classList.add('masonry-layout');
+            } else {
+                grid.classList.remove('masonry-layout');
+            }
+            
+            // Update active layout button
+            document.querySelectorAll('.gallery-controls .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.currentTarget.classList.add('active');
+        }
+
+        function openLightbox(imageSrc, title, description) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const lightboxTitle = document.getElementById('lightbox-title');
+            const lightboxDescription = document.getElementById('lightbox-description');
+            
+            lightboxImage.src = imageSrc;
+            lightboxTitle.textContent = title;
+            lightboxDescription.textContent = description;
+            
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            
+            // Set current image index for navigation
+            const items = document.querySelectorAll('.gallery-item.show, .gallery-item');
+            currentImageIndex = Array.from(items).findIndex(item => 
+                item.querySelector('img').src.includes(imageSrc.split('/').pop())
+            );
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+
+        function changeImage(direction) {
+            const items = document.querySelectorAll('.gallery-item.show, .gallery-item');
+            currentImageIndex = (currentImageIndex + direction + items.length) % items.length;
+            
+            const item = items[currentImageIndex];
+            const img = item.querySelector('img');
+            const title = item.querySelector('h4').textContent;
+            const description = item.querySelector('p').textContent;
+            
+            openLightbox(img.src, title, description);
+        }
+
+        // Add flying effect to gallery items on scroll
+        function animateOnScroll() {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach((item, index) => {
+                const rect = item.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+                
+                if (isVisible && !item.classList.contains('animated')) {
+                    item.classList.add('animated');
+                    item.style.animation = `flyIn 0.8s ease-out ${index * 0.1}s forwards`;
+                }
+            });
+        }
+
+        // Add floating animation to category cards
+        function animateCategoryCards() {
+            const cards = document.querySelectorAll('.category-card');
+            cards.forEach((card, index) => {
+                card.style.animation = `slideInFromLeft 0.8s ease-out ${index * 0.2}s forwards`;
+            });
+        }
+
+        // Add floating animation to stats cards
+        function animateStatsCards() {
+            const cards = document.querySelectorAll('.stat-card');
+            cards.forEach((card, index) => {
+                card.style.animation = `slideInFromBottom 0.8s ease-out ${index * 0.2}s forwards`;
+            });
+        }
+
+        // Close lightbox when clicking outside
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Initialize gallery with animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initial filter
+            filterGallery('all');
+            
+            // Animate category cards
+            setTimeout(animateCategoryCards, 500);
+            
+            // Animate stats cards when they come into view
+            const statsSection = document.querySelector('.gallery-stats');
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            animateStatsCards();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                });
+                observer.observe(statsSection);
+            }
+            
+            // Add scroll animation for gallery items
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Trigger initial animation
+            setTimeout(animateOnScroll, 100);
+        });
+    </script>
+</body>
+</html> 
